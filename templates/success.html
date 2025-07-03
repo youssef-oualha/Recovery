@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recovery Complete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .success-box {
+            border: 1px solid #4CAF50;
+            background-color: #f1f8e9;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #2e7d32;
+        }
+        .back-btn {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-btn:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+    <h1>JPEG Recovery Complete!</h1>
+    
+    <div class="success-box">
+        <h2>File processed successfully</h2>
+        <p>Your file <strong>{{ filename }}</strong> has been processed.</p>
+        <p><strong>{{ count }}</strong> JPEG images were recovered and saved to the application directory.</p>
+        <p><em>Note: Only JPEG files were detected and recovered.</em></p>
+    </div>
+    
+    <a href="/" class="back-btn">Process Another File</a>
+</body>
+</html>

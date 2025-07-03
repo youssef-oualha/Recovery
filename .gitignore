@@ -1,0 +1,23 @@
+# Compiled files
+*.exe
+*.o
+*.out
+
+# Test files
+test_image.raw
+temp_image
+
+# Generated JPEG files
+*.jpg
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
