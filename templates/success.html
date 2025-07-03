@@ -37,13 +37,42 @@
     </style>
 </head>
 <body>
-    <h1>JPEG Recovery Complete!</h1>
+    <h1>File Recovery Complete!</h1>
     
     <div class="success-box">
         <h2>File processed successfully</h2>
-        <p>Your file <strong>{{ filename }}</strong> has been processed.</p>
-        <p><strong>{{ count }}</strong> JPEG images were recovered and saved to the application directory.</p>
-        <p><em>Note: Only JPEG files were detected and recovered.</em></p>
+        <p>Your forensic image has been processed.</p>
+        
+        <h3>Recovery Summary:</h3>
+        <ul style="list-style-type: none; padding: 0;">
+            {% if file_counts.jpeg > 0 %}
+            <li><strong>JPEG images:</strong> {{ file_counts.jpeg }}</li>
+            {% endif %}
+            {% if file_counts.png > 0 %}
+            <li><strong>PNG images:</strong> {{ file_counts.png }}</li>
+            {% endif %}
+            {% if file_counts.gif > 0 %}
+            <li><strong>GIF images:</strong> {{ file_counts.gif }}</li>
+            {% endif %}
+            {% if file_counts.bmp > 0 %}
+            <li><strong>BMP images:</strong> {{ file_counts.bmp }}</li>
+            {% endif %}
+            {% if file_counts.pdf > 0 %}
+            <li><strong>PDF documents:</strong> {{ file_counts.pdf }}</li>
+            {% endif %}
+            {% if file_counts.docx > 0 %}
+            <li><strong>DOCX documents:</strong> {{ file_counts.docx }}</li>
+            {% endif %}
+            {% if file_counts.mp3 > 0 %}
+            <li><strong>MP3 audio files:</strong> {{ file_counts.mp3 }}</li>
+            {% endif %}
+            {% if file_counts.rar > 0 %}
+            <li><strong>RAR archives:</strong> {{ file_counts.rar }}</li>
+            {% endif %}
+        </ul>
+        
+        <p><strong>Total files recovered:</strong> {{ total_count }}</p>
+        <p><em>All recovered files have been saved to the application directory.</em></p>
     </div>
     
     <a href="/" class="back-btn">Process Another File</a>
